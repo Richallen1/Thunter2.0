@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Address</key>
+		<string>409-412 Strand
+Westminster, City of London WC2R 0NS</string>
+		<key>Title</key>
+		<string>Adelphi Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>49 Aldwych London WC2B 4DF</string>
+		<key>Title</key>
+		<string>Aldwych Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>West Street, London, WC2H 9ND</string>
+		<key>Title</key>
+		<string>Ambassadors Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string> 31 Shaftesbury Avenue London W1D 7ES</string>
+		<key>Title</key>
+		<string>Apollo Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>17 Wilton Road, London, SW1V 1LG</string>
+		<key>Title</key>
+		<string>Apollo Victoria Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>6-7 Great Newport Street, London, WC2H 7JB</string>
+		<key>Title</key>
+		<string>Arts Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>32-34 Earlham Street, City of London WC2 9HU</string>
+		<key>Title</key>
+		<string>Cambridge Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>Panton Street, London, SW1Y 4DN</string>
+		<key>Title</key>
+		<string>Comedy Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>2 Jermyn St London SW1Y 4XA</string>
+		<key>Title</key>
+		<string>Criterion Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>268-269 Tottenham Court Road, London W1T 7AQ</string>
+		<key>Title</key>
+		<string>Dominion Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>41 Earlham Street, London, WC2H 9LD</string>
+		<key>Title</key>
+		<string>Donmar Warehouse Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>Drury Lane, Catherine Street, London, WC2B 5JF</string>
+		<key>Title</key>
+		<string>Theatre Royal Drury Lane</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>3-5 Catherine Street, City of London WC2B 5LA</string>
+		<key>Title</key>
+		<string>Duchess Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>St. Martin&apos;s Lane, London, WC2N 4BG</string>
+		<key>Title</key>
+		<string>Duke of Yorks Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>Russell Street, London, WC2B 5HH</string>
+		<key>Title</key>
+		<string>Fortune Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>2 Charing Cross Road, City of London WC2H 0HH</string>
+		<key>Title</key>
+		<string>Garrick Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>Shaftesbury Avenue, London, W1V 7HB</string>
+		<key>Title</key>
+		<string>Gielgud Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>18 Suffolk Street, London SW1Y 4HT, United Kingdom</string>
+		<key>Title</key>
+		<string>Theatre Royal Haymarket</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>57 Haymarket, Westminster, London SW1Y 4QL</string>
+		<key>Title</key>
+		<string>Her Majesty&apos;s Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>16b Jermyn Street, London, SW1Y 6LT</string>
+		<key>Title</key>
+		<string>Jermyn Street Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>5 Leicester Place, London, WC2H 7BP</string>
+		<key>Title</key>
+		<string>Leicester Square Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>ST Martins Lane, London, WC2N 4ES</string>
+		<key>Title</key>
+		<string>London Coliseum</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>Argyll Street, London, W1F 7TF</string>
+		<key>Title</key>
+		<string>London Palladium</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>Wellington Street, London, WC2E 7DA</string>
+		<key>Title</key>
+		<string>Lyceum Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>Shaftesbury Avenue, London, W1V 8BA</string>
+		<key>Title</key>
+		<string>Lyric Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>Puddle Dock, Blackfriars, London, EC4V 3DB</string>
+		<key>Title</key>
+		<string>Mermaid Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>Drury Lane, London, WC2B 5PW</string>
+		<key>Title</key>
+		<string>New London Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>St. Martin&apos;s Lane, London, WC2H 4AH</string>
+		<key>Title</key>
+		<string>Noel Coward Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>Aldwych, London, WC2 5LD</string>
+		<key>Title</key>
+		<string>Novello Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>Cambridge Circus, Shaftesbury Avenue, London, W1A 4AF</string>
+		<key>Title</key>
+		<string>Palace Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>110 Charing Cross Rd, Leicester Square, Westminster, City of London WC2H 0JP, UK</string>
+		<key>Title</key>
+		<string>Phoenix Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>16 Denman Street, London W1D 7DY, United Kingdom</string>
+		<key>Title</key>
+		<string>Piccadilly Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>The Arches, 14 Villiers Street, London, WC2N 6NG</string>
+		<key>Title</key>
+		<string>Players Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>Northumberland Avenue, London, WC2N 5DE</string>
+		<key>Title</key>
+		<string>Playhouse Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>Old Compton Street, London, W1V 6HS</string>
+		<key>Title</key>
+		<string>Prince Edward Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>Coventry Street, London, W1D 6AS</string>
+		<key>Title</key>
+		<string>Prince of Wales Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>Shaftesbury Avenue, London, W1V 8BA</string>
+		<key>Title</key>
+		<string>Queen&apos;s Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>Bow Street, Covent Garden, London, WC2E 9DD</string>
+		<key>Title</key>
+		<string>Royal Opera House</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>The Strand, London, WC2R 0ET</string>
+		<key>Title</key>
+		<string>Savoy Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>210 Shaftesbury Avenue, London, WC2</string>
+		<key>Title</key>
+		<string>Shaftesbury Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>21 Dean Street, London, W1D 3NE</string>
+		<key>Title</key>
+		<string>Soho Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>West Street, London, WC2H 0DP</string>
+		<key>Title</key>
+		<string>St Martin&apos;s Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>Whitehall, London, SW1A 2DY</string>
+		<key>Title</key>
+		<string>Trafalgar Studio 2</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>404 Strand, City of London WC2R 0NH, United Kingdom</string>
+		<key>Title</key>
+		<string>Vaudeville Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>Victoria ST, London, SWIE 5EA</string>
+		<key>Title</key>
+		<string>Victoria Palace Theatre</string>
+	</dict>
+	<dict>
+		<key>Address</key>
+		<string>32-36 Charing Cross Road, Leicester Square, City of London WC2H 0DA</string>
+		<key>Title</key>
+		<string>Wyndham&apos;s Theatre</string>
+	</dict>
+</array>
+</plist>

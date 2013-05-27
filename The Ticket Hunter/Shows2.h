@@ -22,6 +22,7 @@
 @property (strong, nonatomic)NSString *time;
 @property (strong, nonatomic)NSString *lowestPrice;
 @property (strong, nonatomic)NSString *showLink;
+@property (strong, nonatomic)NSString *showImg;
 
 
 

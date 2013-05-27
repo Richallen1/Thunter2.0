@@ -69,7 +69,7 @@ EventsParser *EventxmlParser;
     
     NSLog(@"XXXX%@XXXX",eventName);
     
-    NSString *str = [NSString stringWithFormat:@"%@ Tickets",eventName];
+    NSString *str = [NSString stringWithFormat:@"%@",eventName];
     
     eventLabel.text = str;
     
@@ -84,7 +84,7 @@ EventsParser *EventxmlParser;
     NSLog(@"%@",futureDate);
     dateHigh = newDate1;
     
-NSString *url=[NSString stringWithFormat:@"http://awstest203.elasticbeanstalk.com/EventsSearch.aspx?showname=%@&dateLow=%@&dateHigh=%@&priceLow1&priceHigh150",[eventName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding],todaysDate,futureDate];
+    NSString *url=[NSString stringWithFormat:@"http://awstest203.elasticbeanstalk.com/EventsSearch.aspx?showname=%@&dateLow=%@&dateHigh=%@&priceLow1&priceHigh150",[eventName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding],todaysDate,futureDate];
     NSLog(@"URL : %@",url);
     
     dispatch_queue_t downloadQueue = dispatch_queue_create("Show Downloader", NULL);
@@ -233,7 +233,7 @@ dateHigh = newDate1;
         [cell.contentView addSubview:locationLabel];
         locationLabel.text = [currentEvent showLocation];
         
-        CGRect priceLabelFrame = CGRectMake(170, 1, 150, 20);
+        CGRect priceLabelFrame = CGRectMake(200, 1, 150, 20);
         UILabel *priceInfoLabel = [[UILabel alloc] initWithFrame:priceLabelFrame];
         priceInfoLabel.tag = 0014;
         priceInfoLabel.font = [UIFont boldSystemFontOfSize:12];
@@ -242,7 +242,7 @@ dateHigh = newDate1;
         priceInfoLabel.text = @"Tickets From";
         
         
-        CGRect priceFrame = CGRectMake(180, 18, 80, 30);
+        CGRect priceFrame = CGRectMake(215, 18, 80, 30);
         UILabel *priceLabel = [[UILabel alloc] initWithFrame:priceFrame];
         priceLabel.tag = 0015;
         priceLabel.font = [UIFont boldSystemFontOfSize:14];

@@ -50,10 +50,16 @@
 		9B4DB7591742899000EBF77E /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4DB7571742899000EBF77E /* EventsViewController.m */; };
 		9B4DB75A1742899000EBF77E /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B4DB7581742899000EBF77E /* EventsViewController.xib */; };
 		9B4DB75C17428C3000EBF77E /* ShowNamesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B4DB75B17428C3000EBF77E /* ShowNamesViewController.xib */; };
+		F406F6261753CA1F006601C5 /* VenuesParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F406F6251753CA1F006601C5 /* VenuesParser.m */; };
+		F406F6291753CA59006601C5 /* Venues.m in Sources */ = {isa = PBXBuildFile; fileRef = F406F6281753CA59006601C5 /* Venues.m */; };
+		F406F62B1753DFFC006601C5 /* APPBACKDROP568.png in Resources */ = {isa = PBXBuildFile; fileRef = F406F62A1753DFFC006601C5 /* APPBACKDROP568.png */; };
+		F406F62D1753E030006601C5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F406F62C1753E030006601C5 /* Default-568h@2x.png */; };
+		F406F62F1753E506006601C5 /* backupIMG.png in Resources */ = {isa = PBXBuildFile; fileRef = F406F62E1753E506006601C5 /* backupIMG.png */; };
+		F406F6331753E5F7006601C5 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F406F6311753E5F6006601C5 /* WebViewController.m */; };
+		F406F6341753E5F7006601C5 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F406F6321753E5F6006601C5 /* WebViewController.xib */; };
 		F42EC1E2174A112F006F147E /* EventsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F42EC1E1174A112F006F147E /* EventsParser.m */; };
 		F42EC1E5174A1AD8006F147E /* Shows.m in Sources */ = {isa = PBXBuildFile; fileRef = F42EC1E4174A1AD8006F147E /* Shows.m */; };
 		F42EC1E8174A1B59006F147E /* Shows2.m in Sources */ = {isa = PBXBuildFile; fileRef = F42EC1E7174A1B59006F147E /* Shows2.m */; };
-		F42EC22B174A4A68006F147E /* APPBACKDROP568.png in Resources */ = {isa = PBXBuildFile; fileRef = F42EC22A174A4A68006F147E /* APPBACKDROP568.png */; };
 		F42EC22E174A4AF0006F147E /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42EC22D174A4AF0006F147E /* MainWindow-iPad.xib */; };
 		F42EC26F174A616C006F147E /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = F42EC263174A616B006F147E /* 1.png */; };
 		F42EC270174A616C006F147E /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = F42EC264174A616B006F147E /* 2.png */; };
@@ -72,6 +78,8 @@
 		F4337B081655492A00E17025 /* APPBACKDROP.png in Resources */ = {isa = PBXBuildFile; fileRef = F4337B071655492A00E17025 /* APPBACKDROP.png */; };
 		F4337B0A165549D000E17025 /* DATEBACKBANNER.png in Resources */ = {isa = PBXBuildFile; fileRef = F4337B09165549D000E17025 /* DATEBACKBANNER.png */; };
 		F4337B0E16554C4700E17025 /* SEARCHBACKDROP.png in Resources */ = {isa = PBXBuildFile; fileRef = F4337B0D16554C4700E17025 /* SEARCHBACKDROP.png */; };
+		F43FF0A71753C86D004D19B1 /* VenuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F43FF0A51753C86D004D19B1 /* VenuesViewController.m */; };
+		F43FF0A81753C86D004D19B1 /* VenuesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F43FF0A61753C86D004D19B1 /* VenuesViewController.xib */; };
 		F48CE071165F7F6200B515B0 /* tw.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F48CE070165F7F6200B515B0 /* tw.jpg */; };
 		F4B0DC38165B95B9000F0494 /* 07-map-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = F4B0DC37165B95B9000F0494 /* 07-map-marker.png */; };
 		F4B0DC3E165B9741000F0494 /* 103-map.png in Resources */ = {isa = PBXBuildFile; fileRef = F4B0DC3D165B9741000F0494 /* 103-map.png */; };
@@ -149,13 +157,22 @@
 		9B4DB7571742899000EBF77E /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventsViewController.m; path = ../EventsViewController.m; sourceTree = "<group>"; };
 		9B4DB7581742899000EBF77E /* EventsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
 		9B4DB75B17428C3000EBF77E /* ShowNamesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowNamesViewController.xib; sourceTree = "<group>"; };
+		F406F6241753CA1F006601C5 /* VenuesParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenuesParser.h; sourceTree = "<group>"; };
+		F406F6251753CA1F006601C5 /* VenuesParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenuesParser.m; sourceTree = "<group>"; };
+		F406F6271753CA59006601C5 /* Venues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venues.h; sourceTree = "<group>"; };
+		F406F6281753CA59006601C5 /* Venues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venues.m; sourceTree = "<group>"; };
+		F406F62A1753DFFC006601C5 /* APPBACKDROP568.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = APPBACKDROP568.png; sourceTree = "<group>"; };
+		F406F62C1753E030006601C5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F406F62E1753E506006601C5 /* backupIMG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backupIMG.png; sourceTree = "<group>"; };
+		F406F6301753E5F6006601C5 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = ../WebViewController.h; sourceTree = "<group>"; };
+		F406F6311753E5F6006601C5 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = ../WebViewController.m; sourceTree = "<group>"; };
+		F406F6321753E5F6006601C5 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 		F42EC1E0174A112F006F147E /* EventsParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsParser.h; sourceTree = "<group>"; };
 		F42EC1E1174A112F006F147E /* EventsParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsParser.m; sourceTree = "<group>"; };
 		F42EC1E3174A1AD8006F147E /* Shows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shows.h; sourceTree = "<group>"; };
 		F42EC1E4174A1AD8006F147E /* Shows.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shows.m; sourceTree = "<group>"; };
 		F42EC1E6174A1B59006F147E /* Shows2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shows2.h; sourceTree = "<group>"; };
 		F42EC1E7174A1B59006F147E /* Shows2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shows2.m; sourceTree = "<group>"; };
-		F42EC22A174A4A68006F147E /* APPBACKDROP568.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = APPBACKDROP568.png; sourceTree = "<group>"; };
 		F42EC22D174A4AF0006F147E /* MainWindow-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "MainWindow-iPad.xib"; path = "iPad/MainWindow-iPad.xib"; sourceTree = "<group>"; };
 		F42EC263174A616B006F147E /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		F42EC264174A616B006F147E /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
@@ -174,6 +191,9 @@
 		F4337B071655492A00E17025 /* APPBACKDROP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = APPBACKDROP.png; sourceTree = "<group>"; };
 		F4337B09165549D000E17025 /* DATEBACKBANNER.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DATEBACKBANNER.png; sourceTree = "<group>"; };
 		F4337B0D16554C4700E17025 /* SEARCHBACKDROP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SEARCHBACKDROP.png; sourceTree = "<group>"; };
+		F43FF0A41753C86D004D19B1 /* VenuesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VenuesViewController.h; path = ../VenuesViewController.h; sourceTree = "<group>"; };
+		F43FF0A51753C86D004D19B1 /* VenuesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VenuesViewController.m; path = ../VenuesViewController.m; sourceTree = "<group>"; };
+		F43FF0A61753C86D004D19B1 /* VenuesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenuesViewController.xib; sourceTree = "<group>"; };
 		F48CE070165F7F6200B515B0 /* tw.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tw.jpg; sourceTree = "<group>"; };
 		F4B0DC37165B95B9000F0494 /* 07-map-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "07-map-marker.png"; sourceTree = "<group>"; };
 		F4B0DC3D165B9741000F0494 /* 103-map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "103-map.png"; sourceTree = "<group>"; };
@@ -245,6 +265,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				F406F62C1753E030006601C5 /* Default-568h@2x.png */,
 				F4EDA2811748C8D4007BB77F /* Model */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -271,6 +292,8 @@
 			children = (
 				98B8FBA412A386CC0046CEE2 /* images */,
 				F4EDA27A17369786007BB77F /* Venues.xml */,
+				F406F6321753E5F6006601C5 /* WebViewController.xib */,
+				F43FF0A61753C86D004D19B1 /* VenuesViewController.xib */,
 				9B4DB7581742899000EBF77E /* EventsViewController.xib */,
 				98B1504B129A528B007D2E15 /* SearchViewController.xib */,
 				F4B0DCFF165BB626000F0494 /* ContactViewController.xib */,
@@ -306,6 +329,8 @@
 				F42EC1E1174A112F006F147E /* EventsParser.m */,
 				F4E41CB0174F836500294E54 /* ResultsParser.h */,
 				F4E41CB1174F836500294E54 /* ResultsParser.m */,
+				F406F6241753CA1F006601C5 /* VenuesParser.h */,
+				F406F6251753CA1F006601C5 /* VenuesParser.m */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -321,6 +346,8 @@
 				9B4DB7571742899000EBF77E /* EventsViewController.m */,
 				F4E41CA6174F6B8100294E54 /* ResultsViewController.h */,
 				F4E41CA7174F6B8100294E54 /* ResultsViewController.m */,
+				F43FF0A41753C86D004D19B1 /* VenuesViewController.h */,
+				F43FF0A51753C86D004D19B1 /* VenuesViewController.m */,
 			);
 			name = Tabs;
 			sourceTree = "<group>";
@@ -328,6 +355,8 @@
 		98B8FBA312A3867A0046CEE2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F406F6301753E5F6006601C5 /* WebViewController.h */,
+				F406F6311753E5F6006601C5 /* WebViewController.m */,
 				98818A6A129E826700D78113 /* ShowNamesViewController.h */,
 				98818A6B129E826700D78113 /* ShowNamesViewController.m */,
 				98B15057129A52BA007D2E15 /* DisplayViewController.m */,
@@ -339,6 +368,7 @@
 		98B8FBA412A386CC0046CEE2 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F406F62E1753E506006601C5 /* backupIMG.png */,
 				F42EC281174A9D80006F147E /* THLOGOalpha.png */,
 				F4B0DD04165BB924000F0494 /* 09-chat-2.png */,
 				F48CE070165F7F6200B515B0 /* tw.jpg */,
@@ -355,8 +385,8 @@
 				F4337B09165549D000E17025 /* DATEBACKBANNER.png */,
 				F4337B0D16554C4700E17025 /* SEARCHBACKDROP.png */,
 				F4B0DD0E165BC7EE000F0494 /* app114x114.png */,
-				F42EC22A174A4A68006F147E /* APPBACKDROP568.png */,
 				F4337B071655492A00E17025 /* APPBACKDROP.png */,
+				F406F62A1753DFFC006601C5 /* APPBACKDROP568.png */,
 				F4337B051655476C00E17025 /* iPhoneHeader.png */,
 				15E3EA40135459B6009C784C /* encore.gif */,
 				15E3EA41135459B6009C784C /* getmein.jpg */,
@@ -420,6 +450,8 @@
 				F42EC1E7174A1B59006F147E /* Shows2.m */,
 				F4E41CAD174F80D700294E54 /* Results.h */,
 				F4E41CAE174F80D700294E54 /* Results.m */,
+				F406F6271753CA59006601C5 /* Venues.h */,
+				F406F6281753CA59006601C5 /* Venues.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -524,7 +556,6 @@
 				9B4DB75A1742899000EBF77E /* EventsViewController.xib in Resources */,
 				9B4DB75C17428C3000EBF77E /* ShowNamesViewController.xib in Resources */,
 				9B3C35631749695900312233 /* WickedImg.jpg in Resources */,
-				F42EC22B174A4A68006F147E /* APPBACKDROP568.png in Resources */,
 				F42EC22E174A4AF0006F147E /* MainWindow-iPad.xib in Resources */,
 				F42EC26F174A616C006F147E /* 1.png in Resources */,
 				F42EC270174A616C006F147E /* 2.png in Resources */,
@@ -540,6 +571,11 @@
 				F42EC27A174A616C006F147E /* 12.png in Resources */,
 				F42EC282174A9D80006F147E /* THLOGOalpha.png in Resources */,
 				F4E41CAA174F6B8100294E54 /* ResultsViewController.xib in Resources */,
+				F43FF0A81753C86D004D19B1 /* VenuesViewController.xib in Resources */,
+				F406F62B1753DFFC006601C5 /* APPBACKDROP568.png in Resources */,
+				F406F62D1753E030006601C5 /* Default-568h@2x.png in Resources */,
+				F406F62F1753E506006601C5 /* backupIMG.png in Resources */,
+				F406F6341753E5F7006601C5 /* WebViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,6 +602,10 @@
 				F4E41CAF174F80D700294E54 /* Results.m in Sources */,
 				F4E41CB2174F836500294E54 /* ResultsParser.m in Sources */,
 				F4E41D571753628900294E54 /* MBProgressHUD.m in Sources */,
+				F43FF0A71753C86D004D19B1 /* VenuesViewController.m in Sources */,
+				F406F6261753CA1F006601C5 /* VenuesParser.m in Sources */,
+				F406F6291753CA59006601C5 /* Venues.m in Sources */,
+				F406F6331753E5F7006601C5 /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

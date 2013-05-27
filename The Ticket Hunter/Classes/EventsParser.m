@@ -85,7 +85,10 @@ bool            isStatus;
         {
             currentShow.showLink = currentNodeContent;
         }
-        
+        if ([elementname isEqualToString:@"ShowIMG"])
+        {
+            currentShow.showImg = currentNodeContent;
+        }
         
     }
 	if ([elementname isEqualToString:@"Show"])

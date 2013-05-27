@@ -25,6 +25,7 @@
         self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"APPBACKDROP568.png"]];
         showSearchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 248, 320, 44)];
         showSearchBar.delegate = self;
+        showSearchBar.tintColor = UIColorFromRGB(0X4169e1);
         showSearchBar.placeholder = @"What do you want to see?";
         [self.view addSubview:showSearchBar];
     
@@ -32,10 +33,11 @@
     else
     {
         // code for 3.5-inch screen
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"APPBACKDROP568.png"]];
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"APPBACKDROP2.png"]];
 
     showSearchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 180, 320, 44)];
     showSearchBar.delegate = self;
+    showSearchBar.tintColor = UIColorFromRGB(0X4169e1);
     showSearchBar.placeholder = @"What do you want to see?";
     [self.view addSubview:showSearchBar];
      

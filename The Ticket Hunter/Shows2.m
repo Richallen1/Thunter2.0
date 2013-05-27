@@ -18,7 +18,7 @@
 @synthesize time=_time;
 @synthesize lowestPrice=_lowestPrice;
 @synthesize showLink=_showLink;
-
+@synthesize showImg=_showImg;
 
 
 @end

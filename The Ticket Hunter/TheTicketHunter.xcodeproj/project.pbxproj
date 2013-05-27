@@ -93,6 +93,7 @@
 		F4E41CAA174F6B8100294E54 /* ResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4E41CA8174F6B8100294E54 /* ResultsViewController.xib */; };
 		F4E41CAF174F80D700294E54 /* Results.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E41CAE174F80D700294E54 /* Results.m */; };
 		F4E41CB2174F836500294E54 /* ResultsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E41CB1174F836500294E54 /* ResultsParser.m */; };
+		F4E41D571753628900294E54 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E41D561753628900294E54 /* MBProgressHUD.m */; };
 		F4EDA27B17369786007BB77F /* Venues.xml in Resources */ = {isa = PBXBuildFile; fileRef = F4EDA27A17369786007BB77F /* Venues.xml */; };
 		F4EDA2801748C87E007BB77F /* ShowListParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EDA27F1748C87E007BB77F /* ShowListParser.m */; };
 		F4EDA2841748C8F6007BB77F /* ShowsList.m in Sources */ = {isa = PBXBuildFile; fileRef = F4EDA2831748C8F6007BB77F /* ShowsList.m */; };
@@ -201,6 +202,8 @@
 		F4E41CAE174F80D700294E54 /* Results.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Results.m; sourceTree = "<group>"; };
 		F4E41CB0174F836500294E54 /* ResultsParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsParser.h; sourceTree = "<group>"; };
 		F4E41CB1174F836500294E54 /* ResultsParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsParser.m; sourceTree = "<group>"; };
+		F4E41D551753628900294E54 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		F4E41D561753628900294E54 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		F4EDA27A17369786007BB77F /* Venues.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Venues.xml; sourceTree = "<group>"; };
 		F4EDA27E1748C87E007BB77F /* ShowListParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowListParser.h; sourceTree = "<group>"; };
 		F4EDA27F1748C87E007BB77F /* ShowListParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowListParser.m; sourceTree = "<group>"; };
@@ -227,6 +230,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F4E41D551753628900294E54 /* MBProgressHUD.h */,
+				F4E41D561753628900294E54 /* MBProgressHUD.m */,
 				98B8FBA212A386730046CEE2 /* Tabs */,
 				98B8FBA312A3867A0046CEE2 /* Common */,
 				98B8FBA112A386500046CEE2 /* Application */,
@@ -570,6 +575,7 @@
 				F4E41CA9174F6B8100294E54 /* ResultsViewController.m in Sources */,
 				F4E41CAF174F80D700294E54 /* Results.m in Sources */,
 				F4E41CB2174F836500294E54 /* ResultsParser.m in Sources */,
+				F4E41D571753628900294E54 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

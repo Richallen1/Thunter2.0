@@ -29,6 +29,8 @@
 	NSUserDefaults *standardUserDefaults;
 	
 	IBOutlet UITabBarController *tabbarController;
+    
+    UINavigationController *navController;
 }
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) IBOutlet UIWindow *window;
@@ -37,6 +39,7 @@
 @property (nonatomic, retain) NSUserDefaults *standardUserDefaults;
 @property (nonatomic, retain) IBOutlet UITabBarController *tabbarController;
 @property (strong, nonatomic) NSMutableArray *venueArray;
+@property (nonatomic, retain) IBOutlet UINavigationController *navController;
 
 
 @end

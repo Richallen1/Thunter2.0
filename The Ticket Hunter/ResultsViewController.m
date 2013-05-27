@@ -5,6 +5,7 @@
 //  Created by Richard Allen on 24/05/2013.
 //
 //
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 #import "ResultsViewController.h"
 #import "ResultsParser.h"
@@ -18,6 +19,9 @@
 @synthesize ResultsTableView;
 @synthesize listOfResults;
 @synthesize showImgStr;
+@synthesize eventStr;
+@synthesize showLabel;
+@synthesize eventDate;
 
 
 ResultsParser *ResultsxmlParser;
@@ -36,25 +40,42 @@ ResultsParser *ResultsxmlParser;
 
 - (void)viewDidLoad
 {
+    showLabel.text = eventStr;
+    
     loading = YES;
     dispatch_queue_t downloadQueue = dispatch_queue_create("Show Downloader", NULL);
     
     dispatch_async(downloadQueue, ^{
         
+        dispatch_async(dispatch_get_main_queue(), ^{
+			// No need to hod onto (retain)
+			MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+			hud.labelText = @"Loading";
+		});
+        
+        NSLog(@"%@",eventStr);
+        NSLog(@"%@",eventDate);
+        
+    NSString *url1= @"http://awstest203.elasticbeanstalk.com/mobile_search2.aspx?showname=Wicked&date=2013-06-14&tickets=1&seating=ANY&priceLow=0&priceHigh=150";
+    NSString *url=[NSString stringWithFormat:@"http://awstest203.elasticbeanstalk.com/mobile_search2.aspx?showname=%@&date=%@&tickets=1&seating=ANY&priceLow=0&priceHigh=150",[eventStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding],eventDate];
+    NSString *url3=[NSString stringWithFormat:@"http://awstest203.elasticbeanstalk.com/mobile_search2.aspx?showname=%@&date=%@&tickets=1&seating=ANY&priceLow=0&priceHigh=150",[@"39 Steps" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding],@"5/27/2013 12:00:00 AM"];
 
+        NSLog(@"Date : %@",eventDate);
+
+        NSLog(@"URL : %@",url);
+        
+       
     
-    
-    NSString *url= @"http://awstest203.elasticbeanstalk.com/mobile_search2.aspx?showname=Wicked&date=2013-06-14&tickets=1&seating=ANY&priceLow=0&priceHigh=150";
-    NSLog(@"URL : %@",url);
-    
-    ResultsxmlParser = [[ResultsParser alloc]loadXMLByURL:url];
+    ResultsxmlParser = [[ResultsParser alloc]loadXMLByURL:url3];
     
     listOfResults = [[NSMutableArray alloc]initWithArray:[ResultsxmlParser shows]];
         dispatch_async(dispatch_get_main_queue(), ^{
             
-        });
         loading = NO;
+        [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
         [ResultsTableView reloadData];
+            
+        });
         
     });
     dispatch_release(downloadQueue);
@@ -152,7 +173,7 @@ ResultsParser *ResultsxmlParser;
 
 - (void)dealloc {
     [_showImgView release];
-    [_showLabel release];
+    [showLabel release];
     [super dealloc];
 }
 @end

@@ -11,6 +11,7 @@
 #import "Shows2.h"
 #import "ResultsViewController.h"
 
+
 @interface EventsViewController ()
 
 @end
@@ -24,6 +25,7 @@
 @synthesize loading;
 EventsParser *EventxmlParser;
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -33,8 +35,25 @@ EventsParser *EventxmlParser;
     return self;
 }
 
+- (IBAction)showOnWindow:(id)sender {
+
+}
+
+#pragma mark -
+#pragma mark Execution code
+
+- (void)myTask {
+    // Do something usefull in here instead of sleeping ...
+    sleep(3);
+    // Labels can be changed during the execution
+    //HUD.detailsLabelText = @"Something";
+    //sleep(3);
+}
+
 - (void)viewDidLoad
 {
+
+
 
     loading = NO;
     
@@ -62,6 +81,12 @@ NSString *url=[NSString stringWithFormat:@"http://awstest203.elasticbeanstalk.co
     
     dispatch_async(downloadQueue, ^{
      
+        dispatch_async(dispatch_get_main_queue(), ^{
+			// No need to hod onto (retain)
+			MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+			hud.labelText = @"Loading";
+		});
+        
         loading = YES;
         
     EventxmlParser = [[EventsParser alloc] loadXMLByURL:url];
@@ -71,13 +96,14 @@ NSString *url=[NSString stringWithFormat:@"http://awstest203.elasticbeanstalk.co
     NSLog(@"%lu Count", (unsigned long)[EventxmlParser shows].count);
 
         dispatch_async(dispatch_get_main_queue(), ^{
-            
+            [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
             [eventsTableView reloadData];
             loading = NO;
         });
         
     });
     dispatch_release(downloadQueue);
+
     
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -117,7 +143,7 @@ NSString *url=[NSString stringWithFormat:@"http://awstest203.elasticbeanstalk.co
         
         dispatch_async(dispatch_get_main_queue(), ^{
             
-           // [eventsTableView reloadData];
+           [eventsTableView reloadData];
             
         });
         
@@ -225,7 +251,32 @@ dateHigh = newDate1;
     
     ResultsViewController *rvc = [[ResultsViewController alloc]initWithNibName:@"ResultsViewController" bundle:nil];
     
-    [self.navigationController pushViewController:rvc animated:YES];
+    //Pass Varibles to Results VC
+    Shows2 *currentEvent = [listOfEvents objectAtIndex:indexPath.row];
+    rvc.eventStr = eventName;
+    
+    NSString *dateStr = [currentEvent date];
+    NSLog(@"1 %@",dateStr);
+
+    NSString *currentDateString = [currentEvent date];
+    
+    NSLog(@"currentDateString: %@", currentDateString);
+    
+    NSDateFormatter *dateFormater = [[NSDateFormatter alloc] init];
+    
+    [dateFormater setDateFormat:@"MM-DD-yyyy HH:mm:ss"];
+    NSDate *currentDate = [dateFormater dateFromString:currentDateString];
+    NSLog(@"currentDate: %@", currentDate);
+
+    NSString *u = [dateFormat stringFromDate:currentDate];
+
+    NSLog(@"323: %@", u);
+    
+
+    
+    //rvc.eventDate = [currentEvent date];
+    
+    //[self.navigationController pushViewController:rvc animated:YES];
     
     
     [eventsTableView deselectRowAtIndexPath:indexPath animated:YES];

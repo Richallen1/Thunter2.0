@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MBProgressHUD.h"
 
-@interface EventsViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@interface EventsViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, MBProgressHUDDelegate>
 {
+     MBProgressHUD *HUD;
 
     IBOutlet UILabel *eventLabel;
     
@@ -29,5 +31,8 @@
 
 
 -(void)loadMoreData;
+- (void)myTask;
+- (void)myProgressTask;
+- (void)myMixedTask;
 
 @end

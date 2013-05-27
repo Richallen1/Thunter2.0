@@ -25,13 +25,10 @@
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-	
 
-
-   
-    
 	//[window addSubview:container];
     //[container removeFromSuperview];
+    [window addSubview:navController.view];
 	[window addSubview:tabbarController.view];
 	[window makeKeyAndVisible];
     return YES;

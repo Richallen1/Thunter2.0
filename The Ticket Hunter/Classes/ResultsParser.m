@@ -86,7 +86,7 @@ bool            isStatus;
         {
             currentShow.resultLink = currentNodeContent;
         }
-        
+        NSLog(@"Result Found");
         
     }
 	if ([elementname isEqualToString:@"Ticket"])

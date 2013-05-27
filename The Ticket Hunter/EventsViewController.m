@@ -11,6 +11,8 @@
 #import "Shows2.h"
 #import "ResultsViewController.h"
 
+#define IS_WIDESCREEN ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+
 
 @interface EventsViewController ()
 
@@ -31,30 +33,38 @@ EventsParser *EventxmlParser;
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+
     }
+    
     return self;
 }
 
-- (IBAction)showOnWindow:(id)sender {
 
-}
 
 #pragma mark -
 #pragma mark Execution code
 
-- (void)myTask {
-    // Do something usefull in here instead of sleeping ...
-    sleep(3);
-    // Labels can be changed during the execution
-    //HUD.detailsLabelText = @"Something";
-    //sleep(3);
-}
-
 - (void)viewDidLoad
 {
 
-
-
+    if (IS_WIDESCREEN) {
+    //Set up Table View iPhone 5
+    eventsTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 104, 320, 444) style:UITableViewStylePlain];
+    eventsTableView.delegate = self;
+    eventsTableView.dataSource = self;
+    [eventsTableView reloadData];
+    [self.view addSubview:eventsTableView];
+    }
+    else
+    {
+    //Set up Table View iPhone 4s and lower
+    eventsTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 104, 320, 356) style:UITableViewStylePlain];
+    eventsTableView.delegate = self;
+    eventsTableView.dataSource = self;
+    [eventsTableView reloadData];
+    [self.view addSubview:eventsTableView];
+    }
+    
     loading = NO;
     
     NSLog(@"XXXX%@XXXX",eventName);
@@ -254,29 +264,19 @@ dateHigh = newDate1;
     //Pass Varibles to Results VC
     Shows2 *currentEvent = [listOfEvents objectAtIndex:indexPath.row];
     rvc.eventStr = eventName;
-    
     NSString *dateStr = [currentEvent date];
     NSLog(@"1 %@",dateStr);
-
+    
+    //Format Date
     NSString *currentDateString = [currentEvent date];
-    
     NSLog(@"currentDateString: %@", currentDateString);
-    
     NSDateFormatter *dateFormater = [[NSDateFormatter alloc] init];
+    [dateFormater setDateFormat:@"yyyy-MM-dd"];
+    NSDate *currentDate = [dateFormater dateFromString:[currentEvent date]];
+    rvc.eventDate = [dateFormat stringFromDate:currentDate];
+    NSLog(@"%@", rvc.eventDate);
     
-    [dateFormater setDateFormat:@"MM-DD-yyyy HH:mm:ss"];
-    NSDate *currentDate = [dateFormater dateFromString:currentDateString];
-    NSLog(@"currentDate: %@", currentDate);
-
-    NSString *u = [dateFormat stringFromDate:currentDate];
-
-    NSLog(@"323: %@", u);
-    
-
-    
-    //rvc.eventDate = [currentEvent date];
-    
-    //[self.navigationController pushViewController:rvc animated:YES];
+    [self.navigationController pushViewController:rvc animated:YES];
     
     
     [eventsTableView deselectRowAtIndexPath:indexPath animated:YES];

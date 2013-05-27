@@ -53,8 +53,6 @@
 		F42EC1E2174A112F006F147E /* EventsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F42EC1E1174A112F006F147E /* EventsParser.m */; };
 		F42EC1E5174A1AD8006F147E /* Shows.m in Sources */ = {isa = PBXBuildFile; fileRef = F42EC1E4174A1AD8006F147E /* Shows.m */; };
 		F42EC1E8174A1B59006F147E /* Shows2.m in Sources */ = {isa = PBXBuildFile; fileRef = F42EC1E7174A1B59006F147E /* Shows2.m */; };
-		F42EC228174A3E72006F147E /* EventsViewControllerSmall.m in Sources */ = {isa = PBXBuildFile; fileRef = F42EC226174A3E72006F147E /* EventsViewControllerSmall.m */; };
-		F42EC229174A3E72006F147E /* EventsViewControllerSmall.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42EC227174A3E72006F147E /* EventsViewControllerSmall.xib */; };
 		F42EC22B174A4A68006F147E /* APPBACKDROP568.png in Resources */ = {isa = PBXBuildFile; fileRef = F42EC22A174A4A68006F147E /* APPBACKDROP568.png */; };
 		F42EC22E174A4AF0006F147E /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F42EC22D174A4AF0006F147E /* MainWindow-iPad.xib */; };
 		F42EC26F174A616C006F147E /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = F42EC263174A616B006F147E /* 1.png */; };
@@ -157,9 +155,6 @@
 		F42EC1E4174A1AD8006F147E /* Shows.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shows.m; sourceTree = "<group>"; };
 		F42EC1E6174A1B59006F147E /* Shows2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shows2.h; sourceTree = "<group>"; };
 		F42EC1E7174A1B59006F147E /* Shows2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shows2.m; sourceTree = "<group>"; };
-		F42EC225174A3E72006F147E /* EventsViewControllerSmall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventsViewControllerSmall.h; path = ../EventsViewControllerSmall.h; sourceTree = "<group>"; };
-		F42EC226174A3E72006F147E /* EventsViewControllerSmall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventsViewControllerSmall.m; path = ../EventsViewControllerSmall.m; sourceTree = "<group>"; };
-		F42EC227174A3E72006F147E /* EventsViewControllerSmall.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventsViewControllerSmall.xib; sourceTree = "<group>"; };
 		F42EC22A174A4A68006F147E /* APPBACKDROP568.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = APPBACKDROP568.png; sourceTree = "<group>"; };
 		F42EC22D174A4AF0006F147E /* MainWindow-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "MainWindow-iPad.xib"; path = "iPad/MainWindow-iPad.xib"; sourceTree = "<group>"; };
 		F42EC263174A616B006F147E /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
@@ -276,7 +271,6 @@
 			children = (
 				98B8FBA412A386CC0046CEE2 /* images */,
 				F4EDA27A17369786007BB77F /* Venues.xml */,
-				F42EC227174A3E72006F147E /* EventsViewControllerSmall.xib */,
 				9B4DB7581742899000EBF77E /* EventsViewController.xib */,
 				98B1504B129A528B007D2E15 /* SearchViewController.xib */,
 				F4B0DCFF165BB626000F0494 /* ContactViewController.xib */,
@@ -325,8 +319,6 @@
 				F4B0DCFE165BB625000F0494 /* ContactViewController.m */,
 				9B4DB7561742899000EBF77E /* EventsViewController.h */,
 				9B4DB7571742899000EBF77E /* EventsViewController.m */,
-				F42EC225174A3E72006F147E /* EventsViewControllerSmall.h */,
-				F42EC226174A3E72006F147E /* EventsViewControllerSmall.m */,
 				F4E41CA6174F6B8100294E54 /* ResultsViewController.h */,
 				F4E41CA7174F6B8100294E54 /* ResultsViewController.m */,
 			);
@@ -532,7 +524,6 @@
 				9B4DB75A1742899000EBF77E /* EventsViewController.xib in Resources */,
 				9B4DB75C17428C3000EBF77E /* ShowNamesViewController.xib in Resources */,
 				9B3C35631749695900312233 /* WickedImg.jpg in Resources */,
-				F42EC229174A3E72006F147E /* EventsViewControllerSmall.xib in Resources */,
 				F42EC22B174A4A68006F147E /* APPBACKDROP568.png in Resources */,
 				F42EC22E174A4AF0006F147E /* MainWindow-iPad.xib in Resources */,
 				F42EC26F174A616C006F147E /* 1.png in Resources */,
@@ -571,7 +562,6 @@
 				F42EC1E2174A112F006F147E /* EventsParser.m in Sources */,
 				F42EC1E5174A1AD8006F147E /* Shows.m in Sources */,
 				F42EC1E8174A1B59006F147E /* Shows2.m in Sources */,
-				F42EC228174A3E72006F147E /* EventsViewControllerSmall.m in Sources */,
 				F4E41CA9174F6B8100294E54 /* ResultsViewController.m in Sources */,
 				F4E41CAF174F80D700294E54 /* Results.m in Sources */,
 				F4E41CB2174F836500294E54 /* ResultsParser.m in Sources */,

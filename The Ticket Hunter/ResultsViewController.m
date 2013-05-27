@@ -6,6 +6,7 @@
 //
 //
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define IS_WIDESCREEN ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
 
 #import "ResultsViewController.h"
 #import "ResultsParser.h"
@@ -40,9 +41,29 @@ ResultsParser *ResultsxmlParser;
 
 - (void)viewDidLoad
 {
+    
+    if (IS_WIDESCREEN) {
+        //Set up Table View iPhone 5
+        ResultsTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 104, 320, 444) style:UITableViewStylePlain];
+        ResultsTableView.delegate = self;
+        ResultsTableView.dataSource = self;
+        [ResultsTableView reloadData];
+        [self.view addSubview:ResultsTableView];
+    }
+    else
+    {
+        //Set up Table View iPhone 4s and lower
+        ResultsTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 104, 320, 356) style:UITableViewStylePlain];
+        ResultsTableView.delegate = self;
+        ResultsTableView.dataSource = self;
+        [ResultsTableView reloadData];
+        [self.view addSubview:ResultsTableView];
+    }
+
     showLabel.text = eventStr;
     
     loading = YES;
+    
     dispatch_queue_t downloadQueue = dispatch_queue_create("Show Downloader", NULL);
     
     dispatch_async(downloadQueue, ^{
@@ -56,17 +77,15 @@ ResultsParser *ResultsxmlParser;
         NSLog(@"%@",eventStr);
         NSLog(@"%@",eventDate);
         
-    NSString *url1= @"http://awstest203.elasticbeanstalk.com/mobile_search2.aspx?showname=Wicked&date=2013-06-14&tickets=1&seating=ANY&priceLow=0&priceHigh=150";
+
     NSString *url=[NSString stringWithFormat:@"http://awstest203.elasticbeanstalk.com/mobile_search2.aspx?showname=%@&date=%@&tickets=1&seating=ANY&priceLow=0&priceHigh=150",[eventStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding],eventDate];
-    NSString *url3=[NSString stringWithFormat:@"http://awstest203.elasticbeanstalk.com/mobile_search2.aspx?showname=%@&date=%@&tickets=1&seating=ANY&priceLow=0&priceHigh=150",[@"39 Steps" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding],@"5/27/2013 12:00:00 AM"];
 
-        NSLog(@"Date : %@",eventDate);
-
+        
         NSLog(@"URL : %@",url);
         
        
     
-    ResultsxmlParser = [[ResultsParser alloc]loadXMLByURL:url3];
+    ResultsxmlParser = [[ResultsParser alloc]loadXMLByURL:url];
     
     listOfResults = [[NSMutableArray alloc]initWithArray:[ResultsxmlParser shows]];
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -149,12 +168,9 @@ ResultsParser *ResultsxmlParser;
         priceLabel.font = [UIFont boldSystemFontOfSize:14];
         priceLabel.textColor = [UIColor orangeColor];
         [cell.contentView addSubview:priceLabel];
-        priceLabel.text = [currentResult total];
-
-      
-
-
-        
+        NSString *priceStr = [NSString stringWithFormat:@"£%@", [currentResult total]];
+        priceLabel.text = priceStr;
+   
     }
     return cell;
 }

@@ -18,6 +18,7 @@
     NSDate *now;
 	NSDateFormatter *dateFormat;
 
+    CGRect *tableRect;
     
 }
 

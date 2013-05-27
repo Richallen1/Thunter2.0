@@ -11,7 +11,7 @@
 #import "ShowListParser.h"
 #import "ShowsList.h"
 #import "EventsViewController.h"
-#import "EventsViewControllerSmall.h"
+
 
 
 #define IS_WIDESCREEN ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
@@ -159,8 +159,7 @@ ShowListParser *xmlParser;
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     
-    if (IS_WIDESCREEN) {
-    
+      
     EventsViewController *evc = [[EventsViewController alloc]initWithNibName:@"EventsViewController" bundle:nil];
         if (isFiltered == YES) {
             
@@ -174,26 +173,6 @@ ShowListParser *xmlParser;
         }
         
         [self.navigationController pushViewController:evc animated:YES];
-	}
-    else
-    {
-    EventsViewControllerSmall *evcSM = [[EventsViewControllerSmall alloc]initWithNibName:@"EventsViewControllerSmall" bundle:nil];
-        if (isFiltered == YES) {
-            
-            evcSM.eventName = [copyListOfItems objectAtIndex:indexPath.row];
-        }
-        else
-        {
-            ShowsList *currentShow = [[xmlParser shows] objectAtIndex:indexPath.row];
-            
-            evcSM.eventName = [currentShow showName];
-        }
-        
-        [self.navigationController pushViewController:evcSM animated:YES];
-    }
-    
-    
-
 
 }
 

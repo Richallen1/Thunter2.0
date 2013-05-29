@@ -23,6 +23,6 @@
 @property (strong, nonatomic) NSString *eventStr;
 @property (strong, nonatomic) NSString *eventDate;
 
-
+- (NSString *)stringByDecodingURLFormat;
 
 @end

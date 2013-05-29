@@ -29,6 +29,7 @@
 @property (nonatomic, retain) UIImageView *customImage;
 @property (strong, nonatomic)NSDate *dateHigh;
 @property (nonatomic) BOOL loading;
+@property (retain, nonatomic) IBOutlet UIImageView *showImage;
 
 
 -(void)loadMoreData;

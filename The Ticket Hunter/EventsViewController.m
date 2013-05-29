@@ -25,6 +25,7 @@
 @synthesize listOfEvents;
 @synthesize dateHigh;
 @synthesize loading;
+@synthesize showImage;
 EventsParser *EventxmlParser;
 
 
@@ -108,6 +109,36 @@ EventsParser *EventxmlParser;
         dispatch_async(dispatch_get_main_queue(), ^{
             [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
             [eventsTableView reloadData];
+            
+            Shows2 *currentEvent = [[Shows2 alloc]init];
+
+            NSString *str = [[NSString alloc]init];
+            //str = @"http://media.ticketmaster.co.uk/tm/en-gb/dbimages/35369a.jpg";
+            
+            str = [currentEvent showImg];
+            if (str == nil) {
+                
+                UIImageView *showImv = [[UIImageView alloc]initWithFrame:CGRectMake(9, 10, 123, 86)];
+                showImv.image=[UIImage imageNamed:@"backupImg.png"];
+                showImv.tag = 0016;
+                [self.view addSubview:showImv];
+
+            }
+            else
+            {
+                UIImageView *showImv = [[UIImageView alloc]initWithFrame:CGRectMake(9, 10, 123, 86)];
+                NSURL *imageURL = [NSURL URLWithString:str];
+                NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+                UIImage *image = [UIImage imageWithData:imageData];
+                showImv.tag = 0016;
+                showImv.image = image;
+                [self.view addSubview:showImv];
+                
+                
+            }
+            //showImage.image = image;
+            
+            
             loading = NO;
         });
         
@@ -116,54 +147,10 @@ EventsParser *EventxmlParser;
 
     
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+ 
 }
 
--(void)loadMoreData
-{
 
-    
-    
-    int daysToAdd = 30;
-    NSDate *newDate1 = [dateHigh dateByAddingTimeInterval:60*60*24*daysToAdd];
-    NSString *futureDate = [dateFormat stringFromDate:newDate1];
-    NSLog(@"%@",futureDate);
-    
-    NSString *url=[NSString stringWithFormat:@"http://awstest203.elasticbeanstalk.com/EventsSearch.aspx?showname=%@&dateLow=%@&dateHigh=%@&priceLow1&priceHigh150",[eventName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding],dateHigh,futureDate];
-    NSLog(@"URL : %@",url);
-
-    dispatch_queue_t downloadQueue = dispatch_queue_create("Show Downloader", NULL);
-    
-    dispatch_async(downloadQueue, ^{
-        
-        EventxmlParser = [[EventsParser alloc] loadXMLByURL:url];
-        
-        //listOfEvents = [[NSMutableArray alloc]initWithArray:[EventxmlParser shows]];
-        
-        
-        for (int i = 0; [EventxmlParser shows].count; i++) {
-            
-            Shows2 *currentEvent = [[EventxmlParser shows] objectAtIndex:i];
-            
-            [listOfEvents addObject:currentEvent];
-            
-        }
-        
-        NSLog(@"%lu Count", (unsigned long)[EventxmlParser shows].count);
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            
-           [eventsTableView reloadData];
-            
-        });
-        
-    });
-    dispatch_release(downloadQueue);
-    
-dateHigh = newDate1;
-    
-
-}
 
 #pragma TableView Delegate Methods
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -187,19 +174,7 @@ dateHigh = newDate1;
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        
-        
-//        if (indexPath.row >= (listOfEvents.count /3 *2)) {
-//            if (!loading) {
-//              loading = YES;
-//                
-//                [self loadMoreData];
-//            }
-//            
-//            
-//        }
-        
-        
+
         Shows2 *currentEvent = [listOfEvents objectAtIndex:indexPath.row];
         
         NSString *imgStr = [NSString stringWithFormat:@"%@",[currentEvent showMonth]];
@@ -294,6 +269,7 @@ dateHigh = newDate1;
 
 - (void)dealloc {
     [eventLabel release];
+ 
  
     [super dealloc];
 }

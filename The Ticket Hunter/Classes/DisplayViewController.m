@@ -31,6 +31,8 @@
 	webBack.hidden=YES;
 	webNext.hidden=YES;
 
+
+    
 	NSString *temp;
 	if (isFromInfo){ 
 		temp=[NSString stringWithString:url];

@@ -10,6 +10,8 @@
 #import "VenuesViewController.h"
 #import "VenuesParser.h"
 #import "Venues.h"
+#import "NewMapViewController.h"
+
 
 @interface VenuesViewController ()
 
@@ -127,6 +129,15 @@ VenuesParser *VenuesXMlParser;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+Venues *currentVenue = [[VenuesXMlParser venues]objectAtIndex:indexPath.row];
+    
+    NewMapViewController *nmvc = [[NewMapViewController alloc]initWithNibName:@"NewMapViewController" bundle:nil];
+    
+    nmvc.VenuePostCode = [currentVenue address];
+    
+    [self.navigationController pushViewController:nmvc animated:YES];
+    
+    [venuesTableView deselectRowAtIndexPath:indexPath animated:YES];
     
 }
 

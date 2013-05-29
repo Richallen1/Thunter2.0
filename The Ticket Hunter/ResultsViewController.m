@@ -10,6 +10,7 @@
 
 #import "ResultsViewController.h"
 #import "ResultsParser.h"
+#import "WebViewController.h"
 #import "Results.h"
 
 @interface ResultsViewController ()
@@ -177,7 +178,34 @@ ResultsParser *ResultsxmlParser;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+		Results *currentResult = [listOfResults objectAtIndex:indexPath.row];
+        
+ NSString *cleanUrlString =  [[currentResult resultLink] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    NSLog(@"%@",cleanUrlString);
+    
+    NSString *cleanUrlString2 =  [cleanUrlString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    NSLog(@"%@",cleanUrlString2);
+    
+    
+		//[self.navigationController pushViewController:dvc animated:YES];
+    
+    
+  
+    //WebViewController *wvc = [[WebViewController alloc]initWithNibName:@"WebViewController" bundle:nil];
+   // wvc.resultURL = cleanUrlString2;
+    NSURL *url = [NSURL URLWithString:cleanUrlString2];
+    
+    if (![[UIApplication sharedApplication] openURL:url])
+    
+    //[self.navigationController pushViewController:wvc animated:YES];
+
+    [ResultsTableView deselectRowAtIndexPath:indexPath animated:YES];
+    
 }
+
+
 
 
 

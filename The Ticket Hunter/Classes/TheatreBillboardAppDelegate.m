@@ -10,7 +10,7 @@
 
 #import "TheatreBillboardAppDelegate.h"
 #import "SearchViewController.h"
-
+#import <NewRelicAgent/NewRelicAgent.h>
 
 @implementation TheatreBillboardAppDelegate
 
@@ -25,13 +25,15 @@
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-
+    [NewRelicAgent startWithApplicationToken:@"AA47c0b4f6bd38d909b5cbed2c2157c1d07572c40b"];
 	//[window addSubview:container];
     //[container removeFromSuperview];
     [window addSubview:navController.view];
 	[window addSubview:tabbarController.view];
 	[window makeKeyAndVisible];
     return YES;
+
+    
 }
 
 //-(void)callFirstView{
